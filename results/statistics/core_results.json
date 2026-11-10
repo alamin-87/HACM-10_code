@@ -1,0 +1,23 @@
+{
+  "human_slope_ols": -0.08487463153166329,
+  "human_slope_ols_se": 0.00135816176626549,
+  "human_slope_random_intercept": -0.08544050261740539,
+  "human_slope_random_intercept_se": 0.0012567396942835863,
+  "human_slope_random_slope": -0.0857875375115427,
+  "human_slope_random_slope_se": 0.0028542509444122906,
+  "human_slope_random_slope_p": 1.819421926878404e-198,
+  "n_annotations": 26355,
+  "n_annotators": 342,
+  "n_images": 9910,
+  "per_annotator_n": 283,
+  "per_annotator_negative": 268,
+  "per_annotator_pct_negative": 94.69964664310953,
+  "per_annotator_mean_slope": -0.08303211888170701,
+  "interaction_beta": 0.07814165217111108,
+  "interaction_se": 0.002856332954829317,
+  "interaction_z": 27.357333128476444,
+  "interaction_p": 8.833883434428167e-165,
+  "human_slope_joint": -0.08871118733146802,
+  "model_slope_joint": -0.010569535160356941,
+  "ratio": 8.393102060362716
+}

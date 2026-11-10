@@ -1,0 +1,87 @@
+# The article has no DOI yet, so no doi field appears under
+# preferred-citation; add one when PLOS ONE issues it. S.K.M Shadekul Islam's
+# orcid is likewise omitted until he supplies it. A CFF validator rejects a
+# doi or orcid field that is not one, so these are left out rather than
+# filled with a placeholder.
+cff-version: 1.2.0
+message: If you use this software or the HACM-10 corpus, please cite the paper below.
+title: "HA-ECN: Human-Aligned Epistemic Calibration Networks"
+abstract: >-
+  Code, corpus and trained models for the study of human-model confidence
+  divergence under compound visual ambiguity. Defines HACM, a signed
+  instance-level difference between model confidence and elicited human
+  certainty, releases the HACM-10 corpus of 10,000 photographs carrying
+  elicited confidence for 9,984 of them, and evaluates a three-module system
+  built to reduce the divergence.
+type: software
+license: MIT
+repository-code: "https://github.com/alamin-87/HACM-10_code"
+authors:
+  - given-names: Md.
+    family-names: Al-Amin
+    affiliation: Daffodil International University
+    email: al-amin2305101935@diu.edu.bd
+    orcid: "https://orcid.org/0009-0007-9966-5123"
+  - given-names: Md Yeasir Arafat
+    family-names: Toufick
+    affiliation: Daffodil International University
+    orcid: "https://orcid.org/0009-0006-0793-0894"
+  - given-names: S.K.M Shadekul
+    family-names: Islam
+    affiliation: Daffodil International University
+  - given-names: Abdus
+    family-names: Sattar
+    affiliation: Daffodil International University
+keywords:
+  - confidence calibration
+  - human-AI collaboration
+  - uncertainty quantification
+  - visual ambiguity
+  - selective prediction
+  - benchmark dataset
+preferred-citation:
+  type: article
+  title: "The Calibration Cliff: Human-Model Confidence Divergence under Compound Visual Ambiguity"
+  authors:
+    - given-names: Md.
+      family-names: Al-Amin
+      affiliation: Daffodil International University
+    - given-names: Md Yeasir Arafat
+      family-names: Toufick
+      affiliation: Daffodil International University
+    - given-names: S.K.M Shadekul
+      family-names: Islam
+      affiliation: Daffodil International University
+    - given-names: Abdus
+      family-names: Sattar
+      affiliation: Daffodil International University
+  journal: PLOS ONE
+  year: 2026
+  notes: "Manuscript PONE-D-26-52711, under review."
+references:
+  - type: data
+    title: "HACM-10: a corpus of 10,000 degraded object photographs with elicited per-annotator human confidence ratings"
+    authors:
+      - given-names: Md.
+        family-names: Al-Amin
+      - given-names: Md Yeasir Arafat
+        family-names: Toufick
+      - given-names: S.K.M Shadekul
+        family-names: Islam
+      - given-names: Abdus
+        family-names: Sattar
+    year: 2026
+    doi: "10.17632/3k5dnvhzw9.1"
+  - type: software
+    title: "HA-ECN trained models, fitted temperatures and per-fold diagnostics for HACM-10"
+    authors:
+      - given-names: Md.
+        family-names: Al-Amin
+      - given-names: Md Yeasir Arafat
+        family-names: Toufick
+      - given-names: S.K.M Shadekul
+        family-names: Islam
+      - given-names: Abdus
+        family-names: Sattar
+    year: 2026
+    doi: "10.17632/nbbymp9zp6.1"

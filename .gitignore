@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+.venv/
+venv/
+
+# the corpus and the checkpoints are not in git; they come from the two
+# data deposits and assemble.sh links them in
+data/
+checkpoints/
+
+# figures generated locally
+results/figures_dib/

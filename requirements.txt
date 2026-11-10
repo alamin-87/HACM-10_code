@@ -1,0 +1,18 @@
+# Python 3.11 or later
+#
+# These bounds are the ones the released analyses were verified against. The
+# exact versions used during development were not pinned, so this is a working
+# set rather than an exact reconstruction. Later releases are likely to work.
+# timm is the one to watch: its model names change between versions, and a
+# checkpoint will not load into a model built under a different name.
+
+torch>=2.0
+torchvision>=0.15
+timm>=0.9
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+scikit-learn>=1.3
+statsmodels>=0.14
+matplotlib>=3.7
+Pillow>=9.5

@@ -1,0 +1,5 @@
+architecture,n_folds,mean_cal_err,sd_cal_err,mean_abs_hacm,sd_abs_hacm
+ensemble,0,,,,
+resnet18,0,,,,
+mobilenetv2,0,,,,
+vit_b16,0,,,,
