@@ -1,20 +1,21 @@
-# The article has no DOI yet, so no doi field appears under
-# preferred-citation; add one when PLOS ONE issues it. S.K.M Shadekul Islam's
-# orcid is likewise omitted until he supplies it. A CFF validator rejects a
-# doi or orcid field that is not one, so these are left out rather than
-# filled with a placeholder.
+# Switch preferred-citation to the Data in Brief article once it is published,
+# and add the PLOS ONE article (manuscript PONE-D-26-52711) under references
+# when it is accepted and carries a DOI. S.K.M Shadekul Islam's orcid is
+# omitted until he supplies it: a CFF validator rejects a doi or orcid field
+# that is not one, so these are left out rather than filled with a placeholder.
 cff-version: 1.2.0
-message: If you use this software or the HACM-10 corpus, please cite the paper below.
-title: "HA-ECN: Human-Aligned Epistemic Calibration Networks"
+message: If you use this code or the HACM-10 corpus, please cite the dataset below.
+title: "HACM-10 analysis code: human-model confidence divergence under compound visual ambiguity"
 abstract: >-
-  Code, corpus and trained models for the study of human-model confidence
-  divergence under compound visual ambiguity. Defines HACM, a signed
-  instance-level difference between model confidence and elicited human
-  certainty, releases the HACM-10 corpus of 10,000 photographs carrying
-  elicited confidence for 9,984 of them, and evaluates a three-module system
-  built to reduce the divergence.
+  Analysis code for the HACM-10 corpus. Defines HACM, a signed instance-level
+  difference between a model's confidence and elicited human certainty,
+  computes it per image across cross-validation folds, and implements the
+  three-module system built to reduce the divergence. The corpus itself and
+  the trained checkpoints are deposited separately and are linked in by
+  assemble.sh.
 type: software
 license: MIT
+doi: "10.17632/xwfbms6wpn.1"
 repository-code: "https://github.com/alamin-87/HACM-10_code"
 authors:
   - given-names: Md.
@@ -33,15 +34,15 @@ authors:
     family-names: Sattar
     affiliation: Daffodil International University
 keywords:
+  - metacognitive confidence
+  - elicited uncertainty
   - confidence calibration
   - human-AI collaboration
   - uncertainty quantification
   - visual ambiguity
-  - selective prediction
-  - benchmark dataset
 preferred-citation:
-  type: article
-  title: "The Calibration Cliff: Human-Model Confidence Divergence under Compound Visual Ambiguity"
+  type: dataset
+  title: "HACM-10: a dataset of 10,000 degraded object photographs with elicited per-annotator human confidence ratings"
   authors:
     - given-names: Md.
       family-names: Al-Amin
@@ -55,25 +56,13 @@ preferred-citation:
     - given-names: Abdus
       family-names: Sattar
       affiliation: Daffodil International University
-  journal: PLOS ONE
+  publisher:
+    name: Mendeley Data
   year: 2026
-  notes: "Manuscript PONE-D-26-52711, under review."
+  doi: "10.17632/3k5dnvhzw9.1"
 references:
   - type: data
-    title: "HACM-10: a corpus of 10,000 degraded object photographs with elicited per-annotator human confidence ratings"
-    authors:
-      - given-names: Md.
-        family-names: Al-Amin
-      - given-names: Md Yeasir Arafat
-        family-names: Toufick
-      - given-names: S.K.M Shadekul
-        family-names: Islam
-      - given-names: Abdus
-        family-names: Sattar
-    year: 2026
-    doi: "10.17632/3k5dnvhzw9.1"
-  - type: software
-    title: "HA-ECN trained models, fitted temperatures and per-fold diagnostics for HACM-10"
+    title: "HACM-10 trained models, fitted temperatures and per-fold diagnostics"
     authors:
       - given-names: Md.
         family-names: Al-Amin
