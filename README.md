@@ -27,13 +27,13 @@ side by side:
 somewhere/
 |-- 1_dataset/
 |-- 2_models/
-+-- HA-ECN/
++-- HACM-10_code/
 ```
 
 then from that directory:
 
 ```bash
-bash HA-ECN/assemble.sh
+bash HACM-10_code/assemble.sh
 ```
 
 `assemble.sh` creates symlinks under the repository pointing back at the two
@@ -71,6 +71,7 @@ re-run; completed folds are skipped.
 | §7.7 Monte Carlo dropout, conformal sets | `analysis/cv_mc_dropout.py`, `analysis/cv_raps.py` |
 | §7.8 objective ablation, five folds | `analysis/run_ablation_5fold.py` |
 | Figures | `analysis/figures.py` |
+| The Data in Brief figures | `figures/make_dib_figures.py` |
 
 Runtimes on a single A100: the ensemble about 17 minutes per epoch at batch size
 32, the deterministic baselines proportionally less, Monte Carlo dropout at
@@ -109,6 +110,12 @@ slope −0.0240. Two more were never run — `hca`, absolute confidence matching
 and `focal` — but their loss modules stay under `losses/` because the trainer
 imports every loss at module level.
 
+`trainers/cv_trainer.py` trains any of the four architectures: it takes a
+`model_builder` and a `loss_fn` as arguments, so the ensemble and the three
+baselines all run through it. Its `loss_fn` is called as
+`loss_fn(outputs, labels, H_label)`. Note that the `lr_head` argument is
+accepted but not used; the optimiser applies `lr_backbone` to every parameter.
+
 ## Notes on the released tables
 
 `results/tables/ablation_5fold.csv` records `lambda` as null for `ce`, which has
@@ -121,10 +128,32 @@ unaffected.
 Three RAPS summaries sit under `results/tables/`. `cv_raps_summary.csv` is the
 one the article reports; `cv_raps_summary_alpha002.csv` and
 `cv_raps_a002_l001.csv` are earlier parameter settings, kept so the choice can
-be seen rather than taken on trust. `ablation_fold0_first.csv` and
-`hybrid_loss_ablation.csv` are fold-0 runs that `ablation_5fold.csv` supersedes,
-and `hrc_lambda_sweep.csv` holds three of the four `hrc` runs; the fourth is in
-`checkpoints/ablation/`.
+be seen rather than taken on trust. `hybrid_loss_ablation.csv` holds the fold-0
+runs and is read back by `analysis/run_ablation_5fold.py` as its seed, so it is
+an input rather than a leftover and deleting it will stop that script.
+`ablation_fold0_first.csv` is an earlier fold-0 run that `ablation_5fold.csv`
+supersedes, and `hrc_lambda_sweep.csv` holds three of the four `hrc` runs; the
+fourth is in `checkpoints/ablation/`.
+
+`analysis/cv_mc_dropout.py` and `analysis/cv_raps.py` write per-fold
+intermediates to `data/processed/cv_mc_dropout/` and `data/processed/cv_raps/`.
+Those intermediates are not in the deposits: the Monte Carlo columns were merged
+into `cv_master_full.csv` in the model deposit, and the conformal results are
+summarised in `results/tables/cv_raps_summary.csv`.
+
+Twenty-two of the released files under `results/` were produced interactively
+rather than by a script here, and the scripts will not regenerate them: both
+files under `statistics/`, and under `tables/` `ablation_fold0_first`,
+`annotator_attrition_check`, `cv_calibration_cliff_main`, `cv_hacm_per_fold`,
+`cv_hacm_summary`, `cv_mc_vs_det`, the three `cv_module_b_*`, the three
+`cv_raps_*`, `dal_ablation`, `ece_before_after`, `hrc_lambda_sweep`,
+`joint_fdr`, `leave_one_annotator_out`, `slope_by_architecture`,
+`team_by_architecture` and `temperature_effect_on_slope`. They are released so
+that every number in the article can be read off a file, and each derives from
+the per-fold model outputs released in full in the model deposit under
+`cv_hacm/`, so any of them can be recomputed from material that is here.
+`analysis/cv_analysis.py`, which produces the analysis of variance and the Tukey
+contrasts, prints its results rather than saving them.
 
 `analysis/figures.py` draws figures 2, 5 and 7 more than once. The later block
 in each case is what the article carries; the earlier one is kept so the change
@@ -173,5 +202,3 @@ To cite this code rather than the article, use the archived deposit:
 ## Licence
 
 MIT, see [LICENSE](LICENSE). The corpus is released separately under CC BY 4.0.
-
-# HACM-10_code
