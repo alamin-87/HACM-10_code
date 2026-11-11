@@ -5,7 +5,7 @@
 # that is not one, so these are left out rather than filled with a placeholder.
 cff-version: 1.2.0
 message: If you use this code or the HACM-10 corpus, please cite the dataset below.
-title: "HACM-10 analysis code: human-model confidence divergence under compound visual ambiguity"
+title: "HA-ECN: analysis code for human-model confidence divergence under compound visual ambiguity"
 abstract: >-
   Analysis code for the HACM-10 corpus. Defines HACM, a signed instance-level
   difference between a model's confidence and elicited human certainty,
@@ -42,7 +42,7 @@ keywords:
   - visual ambiguity
 preferred-citation:
   type: dataset
-  title: "HACM-10: a dataset of 10,000 degraded object photographs with elicited per-annotator human confidence ratings"
+  title: "HACM-10: a corpus of 10,000 degraded object photographs with elicited per-annotator human confidence ratings"
   authors:
     - given-names: Md.
       family-names: Al-Amin
@@ -62,7 +62,7 @@ preferred-citation:
   doi: "10.17632/3k5dnvhzw9.1"
 references:
   - type: data
-    title: "HACM-10 trained models, fitted temperatures and per-fold diagnostics"
+    title: "HA-ECN trained models, fitted temperatures and per-fold diagnostics for HACM-10"
     authors:
       - given-names: Md.
         family-names: Al-Amin
