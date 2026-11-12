@@ -5,8 +5,8 @@ Divergence under Compound Visual Ambiguity*.
 
 HACM is the signed, instance-level difference between a model's confidence in
 its predicted class and the certainty a person reports on the same image. On
-HACM-10 that gap widens as visual degradations compose: mean |HACM| runs 0.05 on
-undegraded images, 0.14 at one degradation and 0.19 at two, while accuracy falls
+HACM-10 that gap widens as visual degradations compose: mean |HACM| runs 0.067 on
+undegraded images, 0.159 at one degradation and 0.214 at two, while accuracy falls
 only from 0.984 to 0.959. The model stays confident where people stop being so.
 
 This repository holds the code. The corpus and the trained checkpoints are too
