@@ -16,9 +16,9 @@ large for git and are deposited separately.
 
 | | Size | Licence | Where |
 |---|---|---|---|
-| HACM-10 corpus: 10,000 images, annotations, splits | 7.8 GB | CC BY 4.0 | [doi:10.17632/3k5dnvhzw9.1](https://doi.org/10.17632/3k5dnvhzw9.1) |
-| Trained checkpoints, fitted temperatures, per-fold tables | 2.9 GB | MIT | [doi:10.17632/nbbymp9zp6.1](https://doi.org/10.17632/nbbymp9zp6.1) |
-| This code, archived with a DOI | 13 MB | MIT | [doi:10.17632/xwfbms6wpn.1](https://doi.org/10.17632/xwfbms6wpn.1) |
+| HACM-10 corpus: 10,000 images, annotations, splits | 7.24 GB | CC BY 4.0 | [doi:10.17632/3k5dnvhzw9.1](https://doi.org/10.17632/3k5dnvhzw9.1) |
+| Trained checkpoints, fitted temperatures, per-fold tables | 2.53 GB | MIT | [doi:10.17632/nbbymp9zp6.1](https://doi.org/10.17632/nbbymp9zp6.1) |
+| This code, archived with a DOI | 22.2 MB | MIT | [doi:10.17632/xwfbms6wpn.1](https://doi.org/10.17632/xwfbms6wpn.1) |
 
 Download both deposits and this repository into one directory, so that they sit
 side by side:
